@@ -1,18 +1,26 @@
-from flask import Flask
-from flask import render_template, request
+from flask import Flask, render_template, request, Response
 import RPi.GPIO as GPIO
 import time
+import picamera
+import cv2
+import socket
+import io
 
 app = Flask(__name__, template_folder='template')
 
-m11=17
-m12=27
-m21=23
-m22=24
+# Set camera capture to vc
+vc = cv2.VideoCapture(0)
 
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(m11, GPIO.OUT)
+# Motor Driver/ GPIO Values:Variables
+m11=17 # Orange
+m12=27 # Yellow
+m21=23 # Green
+m22=24 # Grey
+
+# ---GPIO Set up---
+GPIO.setwarnings(False) # Avoid Error
+GPIO.setmode(GPIO.BCM)  # SOC channel set
+GPIO.setup(m11, GPIO.OUT) # Setting m11 as OUTPUT
 GPIO.setup(m12, GPIO.OUT)
 GPIO.setup(m21, GPIO.OUT)
 GPIO.setup(m22, GPIO.OUT)
@@ -23,10 +31,26 @@ GPIO.output(m12 , 0)
 GPIO.output(m21, 0)
 GPIO.output(m22, 0)
 
+# Renders html file (Loads Website)
 @app.route("/")
 def index():
     return render_template('/webpage.html')
 
+# Generate streaming function (Note this will create a jpg called stream within the same directory)
+def gen():
+    while True:
+        rval, frame = vc.read()
+        cv2.imwrite('stream.jpg', frame)
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + open('stream.jpg', 'rb').read() + b'\r\n')
+
+# Returns the video feed to html file
+@app.route('/video_feed')
+def video_feed():
+    return Response(gen(),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
+# Sets GPIO's to left movement
 @app.route('/left_side')
 def left_side():
     data1="LEFT"
@@ -36,6 +60,7 @@ def left_side():
     GPIO.output(m22 , False)
     return 'true'
 
+# Sets GPIO's to right movement
 @app.route('/right_side')
 def right_side():
    data1="RIGHT"
@@ -45,6 +70,7 @@ def right_side():
    GPIO.output(m22 , True)
    return 'true'
 
+# Sets GPIO's to forward movement
 @app.route('/up_side')
 def up_side():
    data1="FORWARD"
@@ -54,6 +80,7 @@ def up_side():
    GPIO.output(m22 , False)
    return 'true'
 
+# Sets GPIO's to reverse movement
 @app.route('/down_side')
 def down_side():
    data1="BACK"
@@ -63,6 +90,7 @@ def down_side():
    GPIO.output(m22 , True)
    return 'true'
 
+# Sets GPIO's to stop
 @app.route('/stop')
 def stop():
    data1="STOP"
@@ -72,5 +100,9 @@ def stop():
    GPIO.output(m22 , False)
    return 'true'
 
+# Host website
 if __name__ == "__main__":
  app.run(host='0.0.0.0',port=5000)
+
+# Releasing the VideoCapture to avoid Out of resources error.
+vc.release()
