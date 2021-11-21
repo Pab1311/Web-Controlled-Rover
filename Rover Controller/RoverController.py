@@ -7,6 +7,8 @@ import socket
 import io
 
 app = Flask(__name__, template_folder='template')
+realUsername = "Bob1234"
+realPassword = "NetworksRock"
 
 # Set camera capture to vc
 vc = cv2.VideoCapture(0)
@@ -34,15 +36,26 @@ GPIO.output(m22, 0)
 # Renders html file (Loads Website)
 @app.route("/")
 def index():
-    return render_template('/webpage.html')
+    return render_template('/login.html')
 
-# Generate streaming function (Note this will create a jpg called stream within the same directory)
+@app.route('/login', methods = ['POST', 'GET'])
+def login():
+    if(request.method == 'POST'):
+        username = request.form.get('username')
+        password = request.form.get('password')
+        if username == realUsername and password == realPassword:
+            return render_template("webpage.html")
+        else:
+            return render_template("/wronglogin.html")
+
+# Generate streaming function
 def gen():
     while True:
         rval, frame = vc.read()
         cv2.imwrite('stream.jpg', frame)
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + open('stream.jpg', 'rb').read() + b'\r\n')
+
 
 # Returns the video feed to html file
 @app.route('/video_feed')

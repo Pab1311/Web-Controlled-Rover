@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -8,30 +7,24 @@
 </head>
 
 <body>
-
-<center><img src="{{ url_for('video_feed') }}"></center>
+<center><h1>Super Rover</h1></center>
+<center><img src="{{ url_for('video_feed') }}" width="820" height="660" style = "position:absolute; left: 160px; top: 100px;"></center>
 
 <div style="float:right">
 
-
-
 </div>
 
-<div style=" height:400px; width:300px; float:right;">
+<div style=" height:400px; width:300px; position: absolute; right: 300px; bottom: 250px;">
 
 <center>
 
-<h1><span style="color:#5C5C5C;">Circuit</span><span style="color:#139442"> Digest</span></h1>
+<a href="#" id="up" style="font-size:30px;text-decoration:none;">  &#x1F881;<br>Forward</a><br><br></center>
 
-<h2>Surveillance Robot</h2><br><br>
+<a href="#" id="left" style="font-size:30px;text-decoration:none;"> &#x1F880;Left</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<a href="#" id="up" style="font-size:30px;text-decoration:none;">  &#x1F881;&#x1F881;<br>Forward</a><br><br></center>
+<a href="#" id="right" style="font-size:30px; text-decoration:none; position : absolute; left: 200px; top; 270px"> Right &#x1F882;</a><br><br>
 
-<a href="#" id="left" style="font-size:30px;text-decoration:none;"> &#x1F880;&#x1F880;Left</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-<a href="#" id="right" style="font-size:30px; text-decoration:none;"> Right &#x1F882;&#x1F882;</a><br><br>
-
-<center><a href="#" id="down" style="font-size:30px;text-decoration:none;"> Backward<br> &#x1F883;&#x1F883;</a></center>
+<center><a href="#" id="down" style="font-size:30px;text-decoration:none;"> Backward<br> &#x1F883;</a></center>
 
 </div>
 
