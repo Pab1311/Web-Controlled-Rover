@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>The Super Rover</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/9d04a42d52.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!--Background Image Setup-->
+  <style>
+    body {
+      background-image: url('https://img.freepik.com/free-vector/technology-wire-mesh-network-connection-digital-background_1017-28407.jpg?size=626&ext=jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    </style>
+</head>
+
+<body>
+
+  <!--Navagation Bar-->
+  <input type="checkbox" id="checkbox" /><label class="fa fa-bars fa-2x" for="checkbox"></label>
+  <nav role='navigation'>
+    <ul class="nav">
+      <li><a href="#page-home">Rover Controls</a></li>
+      <li><a href="#page-about">Meet the Team</a></li>
+      <li><a href="#page-clients">News</a></li>
+      <li><a href="#page-contact">Contact Us</a></li>
+    </ul>
+  </nav>
+  <main class="wrapper">
+    <div class="overlay"></div>
+    <!--Landing/Controls Page-->
+    <h1>The Super Rover<br><br>Customizable Modular Web Controlled Rover<br></h1>
+    <center>
+      <h2>Live Video Feed of your Super Rover!</h2>
+    </center>
+    <!--Video stream of pi camera ****Old Version*******-->
+    <center><img src="{{ url_for('video_feed') }}" width="640" height="480"></center>
+    <img src="http://73.28.42.31:8081" />
+    <div style="float:right"></div>
+    <!--Arrow Keys-->
+    <div class="keys">
+      <div href="#" id='up' class="up arr"><i class="fas fa-arrow-up"></i></div>
+      <br />
+      <div href="#" id='left' class="left arr"><i class="fas fa-arrow-left"></i></div>
+      <div href="#" id='down' class="down arr"><i class="fas fa-arrow-down"></i></div>
+      <div href="#" id='right' class="right arr"><i class="fas fa-arrow-right"></i></div>
+    </div>
+
+    <!--Arrow Key Script-->
+    <script>
+
+      $(document).ready(function () {
+
+        $("#down").on("mousedown", function () {
+
+          $.get('/down_side');
+
+        }).on('mouseup', function () {
+
+          $.get('/stop');
+
+        });
+
+        $("#up").on("mousedown", function () {
+
+          $.get('/up_side');
+
+        }).on('mouseup', function () {
+
+          $.get('/stop');
+
+        });
+
+        $("#left").on("mousedown", function () {
+
+          $.get('/left_side');
+
+        }).on('mouseup', function () {
+
+          $.get('/stop');
+
+        });
+
+        $("#right").on("mousedown", function () {
+
+          $.get('/right_side');
+
+        }).on('mouseup', function () {
+
+          $.get('/stop');
+
+        });
+
+      });
+
+    </script>
+
+    <!--Menu sections-->
+    <section class="home" id="page-home"></section>
+    <section class="about" id="page-about">
+      <div class="content">
+        <div class="container">
+          <!--Team Page-->
+          <div class="team">
+            <div class="member">
+              <img
+                src="https://media-exp1.licdn.com/dms/image/C5603AQHA5uG7Oa9QYQ/profile-displayphoto-shrink_400_400/0/1607123443371?e=1643241600&v=beta&t=2z7-p6Mtm-ZtC9VXMRWI--DqutVHetsMgTiRtNicN_g"
+                alt="member_image">
+              <h3>William Angola</h3>
+              <span></span>
+              <p></p>
+            </div>
+            <div class="member">
+              <img
+                src="https://media-exp1.licdn.com/dms/image/C4E03AQF5rvPH_pP-Nw/profile-displayphoto-shrink_400_400/0/1575830554709?e=1643241600&v=beta&t=YxWgZwWL4AaCKgrwjyr-mWxyjskX0wCkM0nFpvXJD9E"
+                alt="member_image">
+              <h3>Paul Basso</h3>
+              <span></span>
+              <p></p>
+            </div>
+            <div class="member">
+              <img
+                src="https://media-exp1.licdn.com/dms/image/C4D03AQGYc8bBvXuBnw/profile-displayphoto-shrink_400_400/0/1575502181996?e=1643241600&v=beta&t=YofvBc7XUtbITY9Qhs0iJ8dyIEfrVvyxfmTKuPcrPO4"
+                alt="member_image">
+              <h3>Rachel Matthews</h3>
+              <span></span>
+              <p></p>
+            </div>
+            <div class="member">
+              <img
+                src="https://media-exp1.licdn.com/dms/image/C4E03AQG69XL3RVvWOQ/profile-displayphoto-shrink_400_400/0/1601082129427?e=1643241600&v=beta&t=X_DI0tsRHC8NuAP-n8hNJsujtC82c2rcH-a36g17RfQ"
+                alt="member_image">
+              <h3>Fernando Orellana</h3>
+              <span></span>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--News Page-->
+    <section class="clients" id="page-clients">
+      <div class="content">
+        <h1>Coming Soon!<br> Stay up to date on all things Super Rover</h1>
+      </div>
+      </div>
+    </section>
+    <!--Contact Page-->
+    <section class="contact" id="page-contact">
+      <div class="content">
+        <h1>Let Us Know What You Think</h1>
+        <h2>Contact us support@superrover.com</h2>
+        <h3>Not sure which module is right for you?<br> Have an idea for a rover module?<br> We want to help!</h3>
+        <div class="map-container"></div>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>
