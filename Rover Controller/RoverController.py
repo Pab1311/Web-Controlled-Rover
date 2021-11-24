@@ -1,12 +1,10 @@
 from flask import Flask, render_template, request, Response
 import RPi.GPIO as GPIO
-import time
-import picamera
 import cv2
 import socket
 import io
 
-app = Flask(__name__, template_folder='template')
+app = Flask(__name__, template_folder='template', static_folder='static')
 realUsername = "Bob1234"
 realPassword = "NetworksRock"
 
@@ -44,7 +42,7 @@ def login():
         username = request.form.get('username')
         password = request.form.get('password')
         if username == realUsername and password == realPassword:
-            return render_template("webpage.html")
+            return render_template("index.html")
         else:
             return render_template("/wronglogin.html")
 

@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins";
+}
+
+body {
+  background: #f0efef;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+ img{
+   border-radius: 50%;
+ }
+.container .team {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.container .team .member {
+  width: 325px;
+  margin: 10px;
+  background: #7f8af3;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(124, 123, 123, 0.07);
+  padding: 25px;
+}
+
+.container .team .member img {
+  width: 80px;
+}
+
+.container .team .member h3 {
+  color: rgb(238, 227, 227);
+}
+
+.container .team .member span {
+  font-size: 12px;
+  color: #999;
+}
+
+.container .team .member p {
+  margin: 15px 0;
+  font-weight: 400;
+  color: #999;
+  font-size: 15px;
+  text-align: justify;
+}
+ 
+.container .team .member .btn a {
+  background: #ddd;
+  display: block;
+  float: right;
+  width: 125px;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 6px;
+  color: #444;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+.container .team .member .btn a:hover {
+  background: #5a36dd;
+  color: #fff;
+}
+
+ /*Typography*/
+html {
+  font: 16px "Lobster", serif;
+}
+
+h1 {
+  font-size: 2em;
+  color: rgb(250, 251, 252);
+}
+
+h2 {
+  font-size: 1.75em;
+  color: rgb(250, 251, 252);
+}
+
+h3 {
+  font-size: 1.5em;
+  color: rgb(250, 251, 252);
+}
+
+p {
+  font-size: 1.25em;
+  color: rgb(250, 251, 252);
+}
+
+/*BASE*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/*Layout*/
+* {
+  box-sizing: border-box;
+}
+
+/*Navigation*/
+nav {
+  position: relative;
+  left: -12em;
+  width: 6em;
+  height: 100%;
+  background: #7f8af3;
+  font-family: "Roboto Condensed", sans-serif;
+  transition: left 0.85s linear;
+}
+
+.nav ul {
+  float: left;
+  width: 100%;
+}
+
+.nav a,
+.fa-bars {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.35s;
+}
+.nav a:hover,
+.fa-bars:hover {
+  background: #a092d3;
+}
+.nav a:active,
+.fa-bars:active {
+  background: #a092d3;
+}
+
+.nav a {
+  padding: 1em 0.5em;
+  width: 100%;
+}
+
+.fa-bars {
+  position: absolute;
+  left: 0em;
+  padding: 0.25em 0;
+  z-index: 99;
+  width: 2em;
+  background: #7f8af3;
+  text-align: center;
+  transition: left 0.75s ease-in-out;
+}
+.fa-bars:hover {
+  cursor: pointer;
+}
+
+[type=checkbox] {
+  display: none;
+}
+[type=checkbox]:checked + label {
+  left: 3em;
+}
+[type=checkbox]:checked ~ nav {
+  left: 0;
+}
+
+/*Page Wrapper*/
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: url(http://www.gratisography.com/pictures/119.jpg) no-repeat;
+  background-size: cover;
+}
+
+.wrapper > h1 {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  color: #e8f1f3;
+  font-size: 3em;
+  text-align: center;
+}
+
+  
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(42, 35, 146, 0.2);
+}
+
+
+/*Pages*/
+section {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  /*hide all on 0% width*/
+  transition: all 0.75s;
+}
+
+:target {
+  width: 100%;
+}
+
+section .content {
+  margin: 1em auto;
+  max-width: 900px;
+  width: 60%;
+  color: rgb(80, 43, 139);
+}
+
+section h1,
+section h2,
+section h3 {
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+section p {
+  margin: 0.5em 0;
+  font-family: "lobster";
+}
+
+/*Home page*/
+
+
+/*Team page*/
+.about {
+  background: rgba(8, 8, 8, 0.75);
+}
+
+/*Store page*/
+.clients {
+  background: rgba(8, 8, 8, 0.75);
+}
+
+.clients .row {
+  float: left;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.client-box {
+  float: left;
+  margin: 0 3em;
+  width: 100px;
+  height: 100px;
+}
+
+.client-box img {
+  display: block;
+  width: 100%;
+}
+
+/*Contact page*/
+.contact {
+  background: rgba(8, 8, 8, 0.75);
+}
+
+.map-container,
+.map-container iframe {
+  margin: 2em auto;
+  width: 300px;
+  height: 300px;
+  background: url(https://us.123rf.com/450wm/sudowoodo/sudowoodo1904/sudowoodo190400022/121240822-cute-cartoon-drawing-of-mars-rover-space-exploration-vector-illustration-.jpg?ver=6) no-repeat center center;
+  border: 0.5em solid #bcdfe7;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/*Stream*/
+
+.stream img{
+  object-fit: fill;
+}
+
+/*Arrow Keys*/
+.keys {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  width: 500px;
+  height: 200px;
+  margin: auto;
+  padding-bottom: 2em;
+}
+
+.arr {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background: grey;
+  color: white;
+  font-size: 50px;
+  border-right: 10px solid darken(grey, 20);
+  border-bottom: 10px solid darken(grey, 20);
+  border-left: 10px solid darken(grey, 15);
+  border-top: 10px solid darken(grey, 10);
+  display: inline-block;
+  margin: 5px;
+  transition: all .05s linear;
+  user-select: none;
+}
+
+.arr:active {
+  border-bottom: 8px solid #4d4d4d;
+  text-shadow: 0 0 10px white, 0 0 10px white, 0 0 20px white;
+  transform: translate(0, 2px);
+}
+
+.up {
+  position: relative;
+  top: -4px;
+}
+.pressed {
+  border-bottom: 8px solid #4d4d4d;
+  text-shadow: 0 0 10px white;
+  transform: translate(0, 2px);
+}
+
+.names {
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white;
+}
+
+.b {
+  color: blue;
+  text-shadow: 0 0 10px blue, 0 0 10px blue, 0 0 10px blue, 0 0 10px blue;
+  font-size: 100px;
+  font-family: serif;
+}
+
+.a {
+  color: yellow;
+  text-shadow: 0 0 10px yellow, 0 0 10px yellow, 0 0 10px yellow, 0 0 10px yellow;
+  font-size: 100px;
+  font-family: serif;
+}
+
+.fa-arrow-circle-o-down:before {
+  content: "\f01a";
+}
+.fa-arrow-circle-o-up:before {
+  content: "\f01b";
+}
+.fa-arrows:before {
+  content: "\f047";
+}
+.fa-arrow-left:before {
+  content: "\f060";
+}
+.fa-arrow-right:before {
+  content: "\f061";
+}
+.fa-arrow-up:before {
+  content: "\f062";
+}
+.fa-arrow-down:before {
+  content: "\f063";
+}
+.fa-arrows-v:before {
+  content: "\f07d";
+}
+.fa-arrows-h:before {
+  content: "\f07e";
+}
+.fa-arrow-circle-left:before {
+  content: "\f0a8";
+}
+.fa-arrow-circle-right:before {
+  content: "\f0a9";
+}
+.fa-arrow-circle-up:before {
+  content: "\f0aa";
+}
+.fa-arrow-circle-down:before {
+  content: "\f0ab";
+}
+.fa-arrows-alt:before {
+  content: "\f0b2";
+}
+.fa-location-arrow:before {
+  content: "\f124";
+}
+.fa-long-arrow-down:before {
+  content: "\f175";
+}
+.fa-long-arrow-up:before {
+  content: "\f176";
+}
+.fa-long-arrow-left:before {
+  content: "\f177";
+}
+.fa-long-arrow-right:before {
+  content: "\f178";
+}
+.fa-arrow-circle-o-right:before {
+  content: "\f18e";
+}
+.fa-arrow-circle-o-left:before {
+  content: "\f190";
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/lato/v20/S6u9w4BMUTPHh7USSwaPGR_p.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/lato/v20/S6u9w4BMUTPHh7USSwiPGQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

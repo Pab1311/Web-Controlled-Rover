@@ -4,9 +4,8 @@
 <head>
   <title>The Super Rover</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles.css') }}">
   <script src="https://kit.fontawesome.com/9d04a42d52.js" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <!--Background Image Setup-->
   <style>
     body {
@@ -38,9 +37,8 @@
       <h2>Live Video Feed of your Super Rover!</h2>
     </center>
     <!--Video stream of pi camera ****Old Version*******-->
-    <center><img src="{{ url_for('video_feed') }}" width="640" height="480"></center>
-    <img src="http://73.28.42.31:8081" />
-    <div style="float:right"></div>
+    <center><div class= "stream"><img src="{{ url_for('video_feed') }}" width="750" height="550"></div></center>
+
     <!--Arrow Keys-->
     <div class="keys">
       <div href="#" id='up' class="up arr"><i class="fas fa-arrow-up"></i></div>
