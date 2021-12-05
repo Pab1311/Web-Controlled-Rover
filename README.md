@@ -35,4 +35,4 @@ CNT 4104 Web-Controlled Rover Project for Spring 2021. This repository will prov
 
 ## Demonstration
 
-Video will be added
+![Demo](Pictures/Rover%20in%20action.gif)
