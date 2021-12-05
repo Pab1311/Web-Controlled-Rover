@@ -5,23 +5,20 @@ CNT 4104 Web-Controlled Rover Project for Spring 2021. This repository will prov
 ## Hardware
 1 - MakerFocus DIY Robot Car Smart Chassis Kit
 
-* 2: Acrylic Chassis Layers
-* 4: Wheels
-* 4: DC Motors
-* 8: Fasteners
-* M3 size type Screws/Nuts Kit
-* 4 AA Battery Holder/Module
+	* 2: Acrylic Chassis Layers
+	* 4: Wheels
+	* 4: DC Motors
+	* 4: Red Wires
+	* 4: Black Wires
+	* 8: Fasteners
+	* M3 size type Screws/Nuts Kit
+	* 4 AA Battery Holder/Module (6V)
 * 1 - L298N Motor Drive Controller Board Module
-
-1 - Raspberry Pi 4 Model B
-
-1- Portable External Power Bank Battery Charger (5V)
-
-4 - Female-to-Female Jumper Wires
-
-2 - Male-to-Female Jumper Wire
-
-1 - Raspberry Pi Camera Module
+* 1 - Raspberry Pi 4 Model B
+* 1- Portable External Power Bank Battery Charger (5V)
+* 4 - Female-to-Female Jumper Wires
+* 2 - Male-to-Female Jumper Wire
+* 1 - Raspberry Pi Camera Module
 
 ## Diagrams
 #### Electric circuit diagram
@@ -50,6 +47,14 @@ CNT 4104 Web-Controlled Rover Project for Spring 2021. This repository will prov
   * NGIX 
 * Resources used:
   * FGCU's library database, Stack Overflow, Youtube. 
+
+## Assembled Rover
+#### Rover Front
+![Front](Pictures/Rover%20front.png)
+
+### Rover Rear
+![Rear](Pictures/Rover%20rear.png)
+
 
 ## History
 
