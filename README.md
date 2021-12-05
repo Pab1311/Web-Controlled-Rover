@@ -1,5 +1,14 @@
-# Web-Controlled-Rover
-CNT 4104 Web-Controlled Rover Project for Spring 2021. This repository will provide the sprints/information of the project as a whole.
+# Web Controlled Rover ("Super Rover")
+
+*Web Controlled Rover Description -* 
+The goal of the Web-controlled rover known as the "Super Rover" was to create a completely modular device/rover that gives companies the capability to handle any specified task using a website or application. The Super Rover introduces a variety of possibilities for surveillance, item delivery, or entertainment with unique applications based on the company's desire. Any user will be able to control the Super Rover movements by simply clicking/tapping on the preset arrow keys while having a constant stream at all times. Furthermore, users will be able to create accounts to avoid any unwanted access to their Super Rover.
+
+* What is this project?
+	* The Super Rover is a Web Controller Rover using a Raspberry Pi to host the rover website for functionality and communicates with the user's network to provide a seamless rover interaction. The functionality of the rover was built using Python and Flask framework to communicate with the styling/scripting of HTML and CSS. 
+* When was this project made?
+	* The Super Rover was made throughout our Fall 2021 semester.
+* Why was this project made?
+	* The Super Rover was made as a semester-long project in our Software Proj Comp Network course to provide us with experience with building network-based applications.
 
 
 ## Hardware
@@ -47,6 +56,10 @@ CNT 4104 Web-Controlled Rover Project for Spring 2021. This repository will prov
   * NGIX 
 * Resources used:
   * FGCU's library database, Stack Overflow, Youtube. 
+
+## Website design
+
+MISSING IMAGES HERE
 
 ## Assembled Rover
 #### Rover Front
