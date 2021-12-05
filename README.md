@@ -36,3 +36,21 @@ CNT 4104 Web-Controlled Rover Project for Spring 2021. This repository will prov
 ## Demonstration
 
 ![Demo](Pictures/Rover%20in%20action.gif)
+
+## Built With
+
+* IDE used: 
+	* Thonny, focusing on Python development and created by Aivar Annamaa.
+* FrameWork used:
+  * Flask, a micro web framework written in Python 
+* Web Structure/Style "language" used:
+  * HTML
+  * CSS
+* Services used:
+  * NGIX 
+* Resources used:
+  * FGCU's library database, Stack Overflow, Youtube. 
+
+## History
+
+Will be updated when major changes occur.
