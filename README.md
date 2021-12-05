@@ -23,7 +23,16 @@ CNT 4104 Web-Controlled Rover Project for Spring 2021. This repository will prov
 
 1 - Raspberry Pi Camera Module
 
-## Electric circuit diagram
-
+## Diagrams
+#### Electric circuit diagram
 ![Electric Circuit Diagram](Pictures/Electric%20circuit.png)
 
+#### Component Diagram
+![Component Diagram](Pictures/Component%20Diagram.png)
+
+#### Network Diagram
+![Network Diagram](Pictures/Network%20Diagram.png)
+
+## Demonstration
+
+Video will be added
