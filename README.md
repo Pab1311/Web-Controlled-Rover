@@ -68,7 +68,7 @@ MISSING IMAGES HERE
 ### Rover Rear
 ![Rear](Pictures/Rover%20rear.png)
 
-### License
+## License
 [License](LICENSE)
 
 ## History
