@@ -58,8 +58,15 @@ The goal of the Web-controlled rover known as the "Super Rover" was to create a 
   * FGCU's library database, Stack Overflow, Youtube. 
 
 ## Website design
+#### Login View
+![Login](Pictures/Login.PNG)
 
-MISSING IMAGES HERE
+#### Main Page View
+![Main Page](Pictures/Main%20page.PNG)
+
+#### Rover Movement View
+![Rover Movement](Pictures/Rover%20movement.PNG)
+
 
 ## Assembled Rover
 #### Rover Front
