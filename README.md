@@ -7,6 +7,7 @@ The goal of the Web-controlled rover known as the "Super Rover" was to create a 
 	* The Super Rover is a Web Controller Rover using a Raspberry Pi to host the rover website for functionality and communicates with the user's network to provide a seamless rover interaction. The functionality of the rover was built using Python and Flask framework to communicate with the styling/scripting of HTML and CSS. 
 * When was this project made?
 	* The Super Rover was made throughout our Fall 2021 semester.
+	* Team: William Angola, Paul Basso, Fernando Orellana, Rachel Royka 	 
 * Why was this project made?
 	* The Super Rover was made as a semester-long project in our Software Proj Comp Network course to provide us with experience with building network-based applications.
 
